@@ -37,10 +37,10 @@ public class MainLayoutDrawer extends AppLayout implements AppShellConfigurator 
     private SideNav getTabs() {
         SideNav nav = new SideNav();
         nav.addItem(new MainSideItem(),
-                new UpdatesSideItem(),
-                new RfmSuggestionsSideItem(),
                 new RfmUpdatesSideItem(),
-                new CourtsUpdatesSideItem());
+                new RfmSuggestionsSideItem(),
+                new CourtsUpdatesSideItem(),
+                new UpdatesSideItem());
         return nav;
     }
 
