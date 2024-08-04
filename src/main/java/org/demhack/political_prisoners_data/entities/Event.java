@@ -34,6 +34,8 @@ public class Event {
         return "Event{" +
                 "fullName='" + fullName + '\'' +
                 ", birthDate=" + birthDate +
+                ", action='" + action + '\'' +
+                ", date=" + date +
                 '}';
     }
 }
