@@ -7,7 +7,9 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.List;
 
 @Document(collection = "events")
 @Getter @Setter @NoArgsConstructor
@@ -19,7 +21,7 @@ public class Event {
     private String fullName;
 
     @Indexed
-    private Date birthDate;
+    private LocalDate birthDate;
 
     private boolean isTerr;
 
@@ -27,7 +29,21 @@ public class Event {
 
     private String action;
 
-    private Date date;
+    private List<String> aliases;
+
+    private LocalDateTime date;
+
+    private boolean oldIsTerr;
+
+    private boolean newIsTerr;
+
+    private List<String> oldAliases;
+
+    private List<String> newAliases;
+
+    private String oldAddress;
+
+    private String newAddress;
 
     @Override
     public String toString() {
